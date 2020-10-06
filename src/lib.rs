@@ -3,3 +3,4 @@ mod generics;
 mod traits;
 mod stdlib;
 mod smart_pointers;
+mod functions;

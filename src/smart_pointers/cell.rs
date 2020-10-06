@@ -1,9 +1,8 @@
-use std::cell::{RefCell, RefMut};
-use std::collections::HashMap;
-use std::rc::Rc;
-
 #[test]
 pub fn cell_test1() {
+    use std::cell::{RefCell, RefMut};
+    use std::collections::HashMap;
+    use std::rc::Rc;
     let shared_map: Rc<RefCell<_>> = Rc::new(RefCell::new(HashMap::new()));
     {
         let mut map: RefMut<_> = shared_map.borrow_mut();
