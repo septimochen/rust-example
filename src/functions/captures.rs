@@ -9,3 +9,14 @@ fn move_test() {
 
     println!("There're {} elements in vec", hay.len());
 }
+
+#[test]
+fn capture_test() {
+    // use std::mem;
+    let color = String::from("green");
+    let print = || { println!("'color:' {}", color)};
+    print();
+
+    let _reborrow = &color;
+    print();
+}
