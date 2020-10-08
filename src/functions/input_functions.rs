@@ -1,7 +1,9 @@
+#[allow(dead_code)]
 fn call_me<F: Fn()>(f: F) {
     f();
 }
 
+#[allow(dead_code)]
 fn function() {
     println!("I am a function.")
 }
