@@ -9,7 +9,7 @@ pub fn examples_std() {
     assert_eq!(vec2.into_iter().any(|x| x == 3), true);
 
     let array1 = [1, 2, 3];
-    let _array2 = [3, 4, 5];
+    // let _array2 = [3, 4, 5];
     assert_eq!(array1.iter().any(|&x| x == 2), true);
     // assert_eq!(array2.into_iter().any(|&x| x == 2), false);
 }
