@@ -14,7 +14,7 @@ fn move_test() {
 fn capture_test() {
     use std::mem;
     let color = String::from("green");
-    let print = || { println!("'color:' {}", color)};
+    let print = || println!("'color:' {}", color);
     print();
 
     let _reborrow = &color;
