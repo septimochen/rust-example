@@ -7,7 +7,6 @@ pub fn cell_test1() {
     {
         let mut map: RefMut<_> = shared_map.borrow_mut();
         map.insert("africa", 1);
-
     }
     let total: i32 = shared_map.borrow().values().sum();
     println!("{:?}", total);
