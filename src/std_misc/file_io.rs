@@ -57,7 +57,7 @@ where
 
 #[test]
 pub fn file_read_lines() {
-    if let Ok(lines) = read_lines("./hosts") {
+    if let Ok(lines) = read_lines("src/std_misc/hosts") {
         for line in lines {
             if let Ok(ip) = line {
                 println!("{}", ip);
