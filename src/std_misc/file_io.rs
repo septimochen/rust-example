@@ -1,8 +1,10 @@
+use std::fs::File;
+use std::io::{self, BufRead};
+use std::path::Path;
+
 #[test]
 pub fn file_open() {
-    use std::fs::File;
     use std::io::prelude::*;
-    use std::path::Path;
 
     let path = Path::new("src/std_misc/hello.txt");
     let display = path.to_str();
@@ -20,9 +22,7 @@ pub fn file_open() {
 
 #[test]
 pub fn file_create() {
-    use std::fs::File;
     use std::io::prelude::*;
-    use std::path::Path;
 
     const LOREM_IPSUM: &str =
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -46,11 +46,22 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     }
 }
 
-#[test]
-pub fn read_lines() {
-    use std::fs::File;
-    use std::io::{self, BufRead};
-    use std::path::Path;
-    
+#[allow(dead_code)]
+fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
+where
+    P: AsRef<Path>,
+{
+    let file = File::open(filename)?;
+    Ok(io::BufReader::new(file).lines())
 }
 
+#[test]
+pub fn file_read_lines() {
+    if let Ok(lines) = read_lines("./hosts") {
+        for line in lines {
+            if let Ok(ip) = line {
+                println!("{}", ip);
+            }
+        }
+    }
+}
