@@ -45,3 +45,12 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         Ok(_) => println!("successfully write to : {}", display),
     }
 }
+
+#[test]
+pub fn read_lines() {
+    use std::fs::File;
+    use std::io::{self, BufRead};
+    use std::path::Path;
+    
+}
+
