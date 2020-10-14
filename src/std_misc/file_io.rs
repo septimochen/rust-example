@@ -4,7 +4,7 @@ pub fn file_open() {
     use std::io::prelude::*;
     use std::path::Path;
 
-    let path = Path::new("hello.txt");
+    let path = Path::new("src/std_misc/hello.txt");
     let display = path.display();
 
     let mut file = match File::open(&path) {
