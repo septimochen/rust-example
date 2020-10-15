@@ -14,3 +14,14 @@ pub fn child_process() {
         print!("rustc failed and stderr was:\n{}", s);
     }
 }
+
+
+#[test]
+pub fn child_wait() {
+    use std::process::Command;
+
+    let mut child = Command::new("sleep").arg("5").spawn().unwrap();
+    let _result = child.wait().unwrap();
+
+    println!("reached end of child_wait test");
+}
