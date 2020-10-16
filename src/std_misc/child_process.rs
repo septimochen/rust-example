@@ -2,8 +2,8 @@
 pub fn child_process() {
     use std::process::Command;
 
-    let output = Command::new("rustc")
-        .arg("--version")
+    let output = Command::new("rustup")
+        .arg("default")
         .output()
         .unwrap_or_else(|e| panic!("failed to execute process {}", e));
     if output.status.success() {
