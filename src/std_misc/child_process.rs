@@ -25,3 +25,8 @@ pub fn child_wait() {
 
     println!("reached end of child_wait test");
 }
+
+#[test]
+pub fn pipe_test() {
+    
+}
