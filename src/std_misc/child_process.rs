@@ -15,7 +15,6 @@ pub fn child_process() {
     }
 }
 
-
 #[test]
 pub fn child_wait() {
     use std::process::Command;
@@ -28,5 +27,8 @@ pub fn child_wait() {
 
 #[test]
 pub fn pipe_test() {
-    
+    use std::io::prelude::*;
+    use std::process::{Command, Stdio};
+
+    static PANGRAM: &'static str = "the quick brown fox jumped over the lazy dog\n";
 }
