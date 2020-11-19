@@ -15,3 +15,15 @@ fn longest_works() {
     let result = longest(string1.as_str(), string2);
     println!("{}", result);
 }
+
+#[test]
+fn longest_works_2() {
+    let string1 = String::from("abcd");
+    let result;
+    {
+        let string2 = "xyz";
+
+        result = longest(string1.as_str(), string2);
+    }
+    println!("{}", result);
+}
