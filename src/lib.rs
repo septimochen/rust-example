@@ -5,3 +5,4 @@ mod stdlib;
 mod smart_pointers;
 mod functions;
 mod std_misc;
+mod lifetimes;
