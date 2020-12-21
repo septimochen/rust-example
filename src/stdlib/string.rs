@@ -27,6 +27,3 @@ fn string_test() {
 
     println!("Alice says: {}", alice);
 }
-
-
-

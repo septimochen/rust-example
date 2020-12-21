@@ -37,7 +37,9 @@ pub fn iter_1() {
 pub fn iter_2() {
     let mut sequence = 0..3;
 
-    for i in 0..3 {assert_eq!(sequence.next(), Some(i))}
+    for i in 0..3 {
+        assert_eq!(sequence.next(), Some(i))
+    }
 }
 
 #[test]

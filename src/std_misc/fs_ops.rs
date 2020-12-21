@@ -21,5 +21,5 @@ pub fn cat_test() {
     match cat(&Path::new("src/std_misc/hello.txt")) {
         Err(why) => println!("! {:?}", why.kind()),
         Ok(s) => println!("> {}", s),
-    }    
+    }
 }

@@ -10,7 +10,7 @@ fn function() {
 
 #[test]
 fn input_run() {
-    let closure = || { println!("I am a closure")};
+    let closure = || println!("I am a closure");
 
     call_me(function);
     call_me(closure);

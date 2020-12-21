@@ -1,8 +1,8 @@
-mod scoping_rules;
-mod generics;
-mod traits;
-mod stdlib;
-mod smart_pointers;
 mod functions;
-mod std_misc;
+mod generics;
 mod lifetimes;
+mod scoping_rules;
+mod smart_pointers;
+mod std_misc;
+mod stdlib;
+mod traits;

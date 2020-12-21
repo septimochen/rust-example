@@ -49,6 +49,4 @@ fn std_test2() {
         std::mem::size_of_val(&box_point)
     );
     assert_eq!(std::mem::size_of_val(&box_point), 8);
-
-
 }

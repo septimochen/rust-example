@@ -19,7 +19,7 @@ fn vec_test1() {
     }
 
     for x in xs.iter_mut() {
-        *x *=3;
+        *x *= 3;
     }
     assert_eq!(xs, vec![3, 6, 9]);
 }

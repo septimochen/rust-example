@@ -22,8 +22,8 @@ impl<T> GenVal<T> {
 
 #[test]
 pub fn run() {
-    let x = Val {val: 3.0};
-    let y = GenVal {gen_val: "abc"};
+    let x = Val { val: 3.0 };
+    let y = GenVal { gen_val: "abc" };
 
     println!("Gen values: {} {}", x.value(), y.value());
     assert_eq!(3.0 as f64, *x.value());
